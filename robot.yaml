@@ -1,0 +1,22 @@
+tasks:
+  # robotmk-pre:
+  # This task is run before the robotmk task.
+  
+  robotmk:
+    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
+  
+  # robotmk-post:
+  # This task is run after the robotmk task.
+    
+
+condaConfigFile: conda.yaml
+artifactsDir: output
+PATH:
+  - .
+PYTHONPATH:
+  - keywords
+  - libraries
+  - variables
+  
+ignoreFiles:
+  - .gitignore
