@@ -1,10 +1,17 @@
 tasks:
   # robotmk-pre:
   # This task is run before the robotmk task.
-  
+
+  # With this line, Robotmk gets active and tries to generate the configuration from 
+  # environment variables.
   robotmk:
-    shell: python -m robot --report NONE --outputdir output --logtitle "Task log" tasks.robot
-  
+    # PLANNED EXECUTION AS MODULE. - Robotmk will respect 'checkmk_vars' and execute 
+    # Robot Framework with '--include' to only run those tests which are configured
+    # by the user. 
+    # shell: python -m robotmk
+    # MOCKED EXECUTION (which will be done by Robotmk):
+    shell: python -m robot --report NONE --outputdir output -i check_http tasks.robot
+      
   # robotmk-post:
   # This task is run after the robotmk task.
     

@@ -1,0 +1,26 @@
+{
+    "global_config": {
+        "APP_NAME": "Checkmk Homepage",
+        "SERVER_CMK_VERSION": "2.1.0p4",
+        "SERVER_RMK_VERSION": "1.9",
+        "LAST_MTIME": "022-04-04 12:01:20"
+    },
+    "kws_config": {
+        "check_http": {
+            "url": "https://checkmk.com",
+            "page_regex": "Checkmk",
+            "header_regex": "Connection:keep-.*",
+            "pagesize": "10:10000000",
+            "onredirect": "warning",
+            "status_code": 200,
+            "warning": 0.00000008,
+            "critical": 0.00000009,
+            "timeout": 10
+        },
+        "check_dns": {
+            "domain": "checkmk.com",
+            "nameserver": "8.8.8.8",
+            "ip_expect": "45.133.11.28"
+        }
+    }   
+}
