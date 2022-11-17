@@ -1,6 +1,6 @@
 {
     "global_config": {
-        "APP_NAME": "Checkmk Homepage",
+        "APP_NAME": "Checkmk.com",
         "SERVER_CMK_VERSION": "2.1.0p4",
         "SERVER_RMK_VERSION": "1.9",
         "LAST_MTIME": "022-04-04 12:01:20"
@@ -9,12 +9,12 @@
         "check_http": {
             "url": "https://checkmk.com",
             "page_regex": "Checkmk",
-            "header_regex": "Connection:keep-.*",
-            "pagesize": "10:100",
+            "header_regex": "XXXXConnection:keep-.*",
+            "pagesize": "10:10000000",
             "onredirect": "warning",
             "status_code": 200,
-            "warning": 0.01,
-            "critical": 0.02,
+            "warning": 0.8,
+            "critical": 0.9,
             "timeout": 10,
             "fail_on_thresholds": false
         },

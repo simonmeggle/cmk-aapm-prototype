@@ -7,16 +7,7 @@
     },
     "kws_config": {
         "check_http": {
-            "url": "https://checkmk.com",
-            "page_regex": "Checkmk",
-            "header_regex": "Connection:keep-.*",
-            "pagesize": "10:100",
-            "onredirect": "warning",
-            "status_code": 200,
-            "warning": 0.01,
-            "critical": 0.02,
-            "timeout": 10,
-            "fail_on_thresholds": false
+            "url": "https://checkmk.com"
         },
         "check_dns": {
             "domain": "checkmk.com",

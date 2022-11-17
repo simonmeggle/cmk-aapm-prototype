@@ -11,7 +11,13 @@ tasks:
     # shell: python -m robotmk
     # MOCKED EXECUTION (which will be done by Robotmk):
     shell: python -m robot --report NONE --outputdir output -i check_http tasks.robot
-      
+
+  kw: 
+    shell: python -m robot --report NONE --outputdir output -i check_http tasks-kw.robot
+  
+  aapm: 
+    shell: python -m robot --report NONE --outputdir output -i check_http tasks-aapm.robot
+
   # robotmk-post:
   # This task is run after the robotmk task.
     
